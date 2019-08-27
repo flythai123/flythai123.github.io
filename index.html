@@ -12,22 +12,633 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body ontouchstart="">
+    <header class="fly-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-md">
+          <button type="button" data-toggle="collapse" data-target="#collapsibleNavbar" class="navbar-toggler"><i class="fas fa-bars"></i></button><a href="index.html" class="navbar-brand"><img src="images/logo.png"></a>
+          <div id="collapsibleNavbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Book your trip</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Flight Info</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Before your fly</a></li>
+            </ul>
+          </div>
+          <div class="fly-header__right">
+            <div class="fly-header__language"><img src="images/i-lang.png"></div>
+            <div class="fly-header__search"><i class="fas fa-search"></i>
+              <input type="text">
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
     <main class="wrapper">
-      <section class="fly-home"></section>
+      <section class="fly-home">
+        <div style="background-image: url(images/banner.png);" class="fly-home__banner">
+          <div class="fly-home__search">
+            <div class="container">
+              <div class="home-search">
+                <div class="home-search__header">
+                  <div class="home-search__title">
+                    <h5><img src="images/i-plane.png">Book your flight</h5>
+                  </div>
+                  <div class="home-search__choose">
+                    <div class="home-search__radio">
+                      <div class="radio">
+                        <input type="radio" id="r1" name="radio" checked="checked">
+                        <label for="r1">Round Trip</label>
+                      </div>
+                    </div>
+                    <div class="home-search__radio">
+                      <div class="radio">
+                        <input type="radio" id="r2" name="radio">
+                        <label for="r2">One Way</label>
+                      </div>
+                    </div>
+                    <div class="home-search__radio">
+                      <div class="radio">
+                        <input type="radio" id="r3" name="radio">
+                        <label for="r3">Multi Destination</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-search__content no-multi">
+                  <div class="home-search__group">
+                    <div class="home-search__trip">
+                      <div class="home-search__input home-search__go">
+                        <label>From</label>
+                        <input type="text" placeholder="Hanoi(HNA)">
+                        <div class="search-default d-none">
+                          <div class="search-default__title">
+                            <h5>VIETNAM</h5>
+                          </div>
+                          <ul class="search-default__content">
+                            <li><a>Hanoi (HAN)</a></li>
+                            <li><a>Ho Chi Minh city (SGN)</a></li>
+                            <li><a>Ban Me Thuot (BMV)</a></li>
+                            <li><a>Ca Mau (CAH)</a></li>
+                            <li><a>Can Tho (VCA)</a></li>
+                            <li><a>Chu Lai (VCL)</a></li>
+                            <li><a>Con Dao (VCS)</a></li>
+                            <li><a>Da Lat (DLI)</a></li>
+                            <li><a>Da Nang (DAD)</a></li>
+                            <li><a>Dien Bien Phu (DIN)</a></li>
+                            <li><a>Dong Hoi (VDH)</a></li>
+                            <li><a>Hai Phong (HPH)</a></li>
+                            <li><a>Hue (HUI)</a></li>
+                            <li><a>Nha Trang (CXR)</a></li>
+                            <li><a>Phu Quoc (PQC)</a></li>
+                            <li><a>Pleiku (PXU)</a></li>
+                            <li><a>Quy Nhon (UIH)</a></li>
+                            <li><a>Rach Gia (VKG)</a></li>
+                            <li><a>Thanh Hoa (THD)</a></li>
+                            <li><a>Vinh City (VII)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="home-search__img"><img src="images/i-round.png"></div>
+                      <div class="home-search__input home-search__to">
+                        <label>To</label>
+                        <input type="text" placeholder="BangKok (BKK)">
+                        <div class="search-default d-none">
+                          <div class="search-default__title">
+                            <h5>bangkok</h5>
+                          </div>
+                          <ul class="search-default__content">
+                            <li><a>Hanoi (HAN)</a></li>
+                            <li><a>Ho Chi Minh city (SGN)</a></li>
+                            <li><a>Ban Me Thuot (BMV)</a></li>
+                            <li><a>Ca Mau (CAH)</a></li>
+                            <li><a>Can Tho (VCA)</a></li>
+                            <li><a>Chu Lai (VCL)</a></li>
+                            <li><a>Con Dao (VCS)</a></li>
+                            <li><a>Da Lat (DLI)</a></li>
+                            <li><a>Da Nang (DAD)</a></li>
+                            <li><a>Dien Bien Phu (DIN)</a></li>
+                            <li><a>Dong Hoi (VDH)</a></li>
+                            <li><a>Hai Phong (HPH)</a></li>
+                            <li><a>Hue (HUI)</a></li>
+                            <li><a>Nha Trang (CXR)</a></li>
+                            <li><a>Phu Quoc (PQC)</a></li>
+                            <li><a>Pleiku (PXU)</a></li>
+                            <li><a>Quy Nhon (UIH)</a></li>
+                            <li><a>Rach Gia (VKG)</a></li>
+                            <li><a>Thanh Hoa (THD)</a></li>
+                            <li><a>Vinh City (VII)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-search__date">
+                      <div class="home-search__input home-search__depart">
+                        <label>Depart</label>
+                        <input type="text" placeholder="Select Date.." class="flatpickr">
+                      </div>
+                      <div class="home-search__input home-search__return">
+                        <label>Return</label>
+                        <input type="text" placeholder="Select Date.." class="flatpickr">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="home-search__passenger">
+                    <div class="home-search__input">
+                      <label>Passenger</label>
+                      <input type="text" value="2 Adults, 1 Child, 1 Infant">
+                      <ul class="passenger-box d-none">
+                        <li>
+                          <p class="p-left"><span>Aldult &nbsp;|&nbsp;</span>12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                        <li>
+                          <p class="p-left"><span>Child &nbsp;|&nbsp;</span>Below - 12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                        <li>
+                          <p class="p-left"><span>Infant &nbsp;|&nbsp;</span>Below - 12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-search__content multi d-none">
+                  <div class="home-search__group">
+                    <div class="home-search__trip">
+                      <div class="home-search__input home-search__go">
+                        <label>From</label>
+                        <input type="text" placeholder="Hanoi(HNA)">
+                        <div class="search-default d-none">
+                          <div class="search-default__title">
+                            <h5>VIETNAM</h5>
+                          </div>
+                          <ul class="search-default__content">
+                            <li><a>Hanoi (HAN)</a></li>
+                            <li><a>Ho Chi Minh city (SGN)</a></li>
+                            <li><a>Ban Me Thuot (BMV)</a></li>
+                            <li><a>Ca Mau (CAH)</a></li>
+                            <li><a>Can Tho (VCA)</a></li>
+                            <li><a>Chu Lai (VCL)</a></li>
+                            <li><a>Con Dao (VCS)</a></li>
+                            <li><a>Da Lat (DLI)</a></li>
+                            <li><a>Da Nang (DAD)</a></li>
+                            <li><a>Dien Bien Phu (DIN)</a></li>
+                            <li><a>Dong Hoi (VDH)</a></li>
+                            <li><a>Hai Phong (HPH)</a></li>
+                            <li><a>Hue (HUI)</a></li>
+                            <li><a>Nha Trang (CXR)</a></li>
+                            <li><a>Phu Quoc (PQC)</a></li>
+                            <li><a>Pleiku (PXU)</a></li>
+                            <li><a>Quy Nhon (UIH)</a></li>
+                            <li><a>Rach Gia (VKG)</a></li>
+                            <li><a>Thanh Hoa (THD)</a></li>
+                            <li><a>Vinh City (VII)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="home-search__img"><img src="images/i-round.png"></div>
+                      <div class="home-search__input home-search__to">
+                        <label>To</label>
+                        <input type="text" placeholder="BangKok (BKK)">
+                        <div class="search-default d-none">
+                          <div class="search-default__title">
+                            <h5>bangkok</h5>
+                          </div>
+                          <ul class="search-default__content">
+                            <li><a>Hanoi (HAN)</a></li>
+                            <li><a>Ho Chi Minh city (SGN)</a></li>
+                            <li><a>Ban Me Thuot (BMV)</a></li>
+                            <li><a>Ca Mau (CAH)</a></li>
+                            <li><a>Can Tho (VCA)</a></li>
+                            <li><a>Chu Lai (VCL)</a></li>
+                            <li><a>Con Dao (VCS)</a></li>
+                            <li><a>Da Lat (DLI)</a></li>
+                            <li><a>Da Nang (DAD)</a></li>
+                            <li><a>Dien Bien Phu (DIN)</a></li>
+                            <li><a>Dong Hoi (VDH)</a></li>
+                            <li><a>Hai Phong (HPH)</a></li>
+                            <li><a>Hue (HUI)</a></li>
+                            <li><a>Nha Trang (CXR)</a></li>
+                            <li><a>Phu Quoc (PQC)</a></li>
+                            <li><a>Pleiku (PXU)</a></li>
+                            <li><a>Quy Nhon (UIH)</a></li>
+                            <li><a>Rach Gia (VKG)</a></li>
+                            <li><a>Thanh Hoa (THD)</a></li>
+                            <li><a>Vinh City (VII)</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="home-search__date">
+                      <div class="home-search__input home-search__depart">
+                        <label>Depart</label>
+                        <input type="text" placeholder="Select Date.." class="flatpickr">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="home-search__group active">
+                    <div class="home-search__trip">
+                      <div class="home-search__input home-search__go">
+                        <label>From</label>
+                        <input type="text" placeholder="Hanoi(HNA)">
+                      </div>
+                      <div class="home-search__img"><img src="images/i-round.png"></div>
+                      <div class="home-search__input home-search__to">
+                        <label>To</label>
+                        <input type="text" placeholder="BangKok (BKK)">
+                      </div>
+                    </div>
+                    <div class="home-search__date">
+                      <div class="home-search__input home-search__depart">
+                        <label>Depart</label>
+                        <input type="text" placeholder="Select Date..">
+                      </div>
+                    </div>
+                    <div class="home-search__close">
+                      <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.976 51.976" xml:space="preserve">
+                        <g>
+                          <path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0                                                                                                                C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778                                                                                                                c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828                                                                                                                c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828                                                                                                                l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="home-search__add"><a href="#" class="btn btn-blue btn-round">Add</a></div>
+                  <div class="home-search__passenger">
+                    <div class="home-search__input">
+                      <label>Passenger</label>
+                      <input type="text" value="2 Adults, 1 Child, 1 Infant">
+                      <ul class="passenger-box d-none">
+                        <li>
+                          <p class="p-left"><span>Aldult &nbsp;|&nbsp;</span>12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                        <li>
+                          <p class="p-left"><span>Child &nbsp;|&nbsp;</span>Below - 12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                        <li>
+                          <p class="p-left"><span>Infant &nbsp;|&nbsp;</span>Below - 12+ years</p>
+                          <p class="p-right"><span class="minus btn-disable"><i class="fas fa-minus"></i></span><span class="numb">1</span><span class="plus"><i class="fas fa-plus"></i></span></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-search__btn"><a href="fly-list.html" class="btn btn-blue btn-round">Search Flight</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fly-home__offers">
+          <div class="container">
+            <div class="home-title">
+              <h2>View Latest Offers Departing From Thailand</h2>
+            </div>
+            <div class="offers-slide">
+              <div class="offers-slide__item">
+                <div class="offers-item">
+                  <div class="offers-item__trip">
+                    <p>Hanoi (HNA)</p><img src="images/plane-icon.png">
+                    <p>Bangkok(BKK)</p>
+                  </div>
+                  <div class="offers-item__info">
+                    <p>Depart: Wed, May 23</p><img src="images/logo-vnairline.png">
+                  </div>
+                  <div class="offers-item__detail">
+                    <div class="offers-item__price"><img src="images/i-plane-lg.png">
+                      <p>From<span>$ 75</span></p>
+                    </div>
+                    <div class="offers-item__view"><a href="#">View all</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers-slide__item">
+                <div class="offers-item">
+                  <div class="offers-item__trip">
+                    <p>Hanoi (HNA)</p><img src="images/plane-icon.png">
+                    <p>Bangkok(BKK)</p>
+                  </div>
+                  <div class="offers-item__info">
+                    <p>Depart: Wed, May 23</p><img src="images/logo-vnairline.png">
+                  </div>
+                  <div class="offers-item__detail">
+                    <div class="offers-item__price"><img src="images/i-plane-lg.png">
+                      <p>From<span>$ 75</span></p>
+                    </div>
+                    <div class="offers-item__view"><a href="#">View all</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers-slide__item">
+                <div class="offers-item">
+                  <div class="offers-item__trip">
+                    <p>Hanoi (HNA)</p><img src="images/plane-icon.png">
+                    <p>Bangkok(BKK)</p>
+                  </div>
+                  <div class="offers-item__info">
+                    <p>Depart: Wed, May 23</p><img src="images/logo-vnairline.png">
+                  </div>
+                  <div class="offers-item__detail">
+                    <div class="offers-item__price"><img src="images/i-plane-lg.png">
+                      <p>From<span>$ 75</span></p>
+                    </div>
+                    <div class="offers-item__view"><a href="#">View all</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers-slide__item">
+                <div class="offers-item">
+                  <div class="offers-item__trip">
+                    <p>Hanoi (HNA)</p><img src="images/plane-icon.png">
+                    <p>Bangkok(BKK)</p>
+                  </div>
+                  <div class="offers-item__info">
+                    <p>Depart: Wed, May 23</p><img src="images/logo-vnairline.png">
+                  </div>
+                  <div class="offers-item__detail">
+                    <div class="offers-item__price"><img src="images/i-plane-lg.png">
+                      <p>From<span>$ 75</span></p>
+                    </div>
+                    <div class="offers-item__view"><a href="#">View all</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="offers-slide__item">
+                <div class="offers-item">
+                  <div class="offers-item__trip">
+                    <p>Hanoi (HNA)</p><img src="images/plane-icon.png">
+                    <p>Bangkok(BKK)</p>
+                  </div>
+                  <div class="offers-item__info">
+                    <p>Depart: Wed, May 23</p><img src="images/logo-vnairline.png">
+                  </div>
+                  <div class="offers-item__detail">
+                    <div class="offers-item__price"><img src="images/i-plane-lg.png">
+                      <p>From<span>$ 75</span></p>
+                    </div>
+                    <div class="offers-item__view"><a href="#">View all</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fly-home__deal">
+          <div class="container">
+            <div class="home-title">
+              <h2>Special Deals</h2>
+              <p>Happiness has no limit. FlyThaiAirways provides you special offers like no other. Enjoy at your own pace.</p>
+            </div>
+            <div class="deal-slide">
+              <div class="deal-slide__item">
+                <div class="deal-item">
+                  <div class="deal-item__img"><img src="images/deal1.png"></div>
+                  <div class="deal-item__content">
+                    <h4 class="deal-item__name">Phuket</h4>
+                    <p class="deal-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="deal-item__bottom">
+                      <div class="deal-item__price">
+                        <p>200$</p>
+                      </div>
+                      <div class="deal-item__read"><a href="#">Read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal-slide__item">
+                <div class="deal-item">
+                  <div class="deal-item__img"><img src="images/deal2.png"></div>
+                  <div class="deal-item__content">
+                    <h4 class="deal-item__name">Bangkok</h4>
+                    <p class="deal-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="deal-item__bottom">
+                      <div class="deal-item__price">
+                        <p>200$</p>
+                      </div>
+                      <div class="deal-item__read"><a href="#">Read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal-slide__item">
+                <div class="deal-item">
+                  <div class="deal-item__img"><img src="images/deal3.png"></div>
+                  <div class="deal-item__content">
+                    <h4 class="deal-item__name">Pattaya City</h4>
+                    <p class="deal-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="deal-item__bottom">
+                      <div class="deal-item__price">
+                        <p>200$</p>
+                      </div>
+                      <div class="deal-item__read"><a href="#">Read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal-slide__item">
+                <div class="deal-item">
+                  <div class="deal-item__img"><img src="images/deal2.png"></div>
+                  <div class="deal-item__content">
+                    <h4 class="deal-item__name">Bangkok</h4>
+                    <p class="deal-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="deal-item__bottom">
+                      <div class="deal-item__price">
+                        <p>200$</p>
+                      </div>
+                      <div class="deal-item__read"><a href="#">Read more</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="fly-footer">
+      <div style="background-image: url(images/bg-footer.png);" class="fly-footer__top">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-content__col">
+              <div class="footer-travel">
+                <h5 class="footer-title">TRAVEL</h5>
+                <p class="p1">flythaiairways.vn offers schedule search, pricing check and reservation of Vietnam domestic and international flights. We are dedicated to bringing the best booking experience to domestic and international travelers with our English speaking consultants, user-friendly website and prompt confirmation.</p>
+                <div class="footer-travel__phone">
+                  <p class="p1">Need help?</p>
+                  <p class="p2">+84.938.702.666</p>
+                  <p class="p1">Email: booking@flythaiairways.vn</p>
+                </div>
+                <h5 class="footer-title">FOLLOW US</h5>
+                <ul class="footer-social">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content__col">
+              <div class="footer-subs">
+                <h5 class="footer-title">SUBSCRIBE</h5>
+                <ul class="footer-subs__nav">
+                  <li><a href="#">How to Book</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Before You Board</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                </ul>
+                <ul class="footer-card">
+                  <li><a href="#"><img src="images/card1.png"></a></li>
+                  <li><a href="#"><img src="images/card2.png"></a></li>
+                  <li><a href="#"><img src="images/card3.png"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-content__col">
+              <div class="footer-form">
+                <h5 class="footer-title">SUBSCRIBE</h5>
+              </div>
+              <form>
+                <div class="form-group">
+                  <input type="text" placeholder="Your name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Your Email Address" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea type="text" placeholder="Your Messenger" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-blue">Submit</button>
+                </div>
+              </form>
+            </div>
+            <div class="footer-content__col">
+              <h5 class="footer-title">GALLERY</h5>
+              <ul class="footer-gallery">
+                <li><a href="#"><img src="images/deal1.png"></a></li>
+                <li><a href="#"><img src="images/deal2.png"></a></li>
+                <li><a href="#"><img src="images/deal3.png"></a></li>
+                <li><a href="#"><img src="images/deal1.png"></a></li>
+                <li><a href="#"><img src="images/deal2.png"></a></li>
+                <li><a href="#"><img src="images/deal3.png"></a></li>
+                <li><a href="#"><img src="images/deal1.png"></a></li>
+                <li><a href="#"><img src="images/deal2.png"></a></li>
+                <li><a href="#"><img src="images/deal3.png"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fly-footer__bottom">
+        <div class="container">
+          <p>FlyThaiAirways.vn © 2018. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/flatpickr.js"></script>
-    <script></script>
-    
-    
-    
-    
-    
-    
-    
-    
+    <script>
+      $('.home-search__go input').click(function () {
+          $(this).parents('.home-search__go').children('.search-default').toggleClass('d-none');
+          $('.home-search__to .search-default').addClass('d-none');
+      });
+      $('.home-search__to input').click(function () {
+          $(this).parents('.home-search__to').children('.search-default').toggleClass('d-none');
+          $('.home-search__go .search-default').addClass('d-none');
+      });
+      $('.home-search__passenger input').click(function () {
+          $('.passenger-box').toggleClass('d-none');
+      });
+    </script>
+    <script>
+      $('#r1').click(function () {
+          $('.no-multi .home-search__return').removeClass('d-hidden');
+          $('.multi').addClass('d-none');
+          $('.no-multi').removeClass('d-none');
+      });
+      $('#r2').click(function () {
+          $('.no-multi .home-search__return').addClass('d-hidden');
+          $('.multi').addClass('d-none');
+          $('.no-multi').removeClass('d-none');
+      });
+      $('#r3').click(function () {
+          $('.multi').removeClass('d-none');
+          $('.no-multi').addClass('d-none');
+      
+      });
+    </script>
+    <script>
+      $('.home-search__depart input').flatpickr({
+          altInput: false,
+          disableMobile: true,
+          dateFormat: 'D, d-m-Y',
+          minDate: 'today'
+      });
+      $('.home-search__return input').flatpickr({
+          altInput: false,
+          disableMobile: true,
+          dateFormat: 'D, d-m-Y',
+          minDate: 'today'
+      });
+    </script>
+    <script>
+      $(".offers-slide").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          //autoplay: true,
+          speed: 500,
+          autoplaySpeed: 5000,
+          arrows: false,
+          dots: true,
+          responsive: [
+              {
+                  breakpoint: 991,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1
+                  }
+              },
+              {
+                  breakpoint: 767,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+          ]
+      });
+    </script>
+    <script>
+      $(".deal-slide").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          //autoplay: true,
+          speed: 500,
+          autoplaySpeed: 5000,
+          arrows: false,
+          dots: true,
+          responsive: [
+              {
+                  breakpoint: 991,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1
+                  }
+              },
+              {
+                  breakpoint: 767,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+          ]
+      });
+    </script>
   </body>
 </html>

@@ -7,8 +7,594 @@ html(lang="vi")
         include jades/header.jade
         main.wrapper
             section.fly-home
+                .fly-home__banner(style='background-image: url(images/banner.png);')
+                    .fly-home__search
+                        .container
+                            .home-search
+                                .home-search__header
+                                    .home-search__title
+                                        h5
+                                            img(src='images/i-plane.png')
+                                            | Book your flight
+                                    .home-search__choose
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r1' name='radio' checked='checked')
+                                                label(for='r1') Round Trip
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r2' name='radio')
+                                                label(for='r2') One Way
+                                        .home-search__radio
+                                            .radio
+                                                input(type='radio' id='r3' name='radio')
+                                                label(for='r3') Multi Destination
+                                .home-search__content.no-multi
+                                    .home-search__group
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 VIETNAM
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
 
 
+
+                                            .home-search__img
+                                                img(src="images/i-round.png")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 bangkok
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                            .home-search__input.home-search__return
+                                                label Return
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                    .home-search__passenger
+                                        .home-search__input
+                                            label Passenger
+                                            input(type='text', value='2 Adults, 1 Child, 1 Infant')
+                                            ul.passenger-box.d-none
+                                                li
+                                                    p.p-left
+                                                        span Aldult &nbsp;|&nbsp;
+                                                        | 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Child &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Infant &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                .home-search__content.multi.d-none
+                                    .home-search__group
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 VIETNAM
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+
+
+                                            .home-search__img
+                                                img(src="images/i-round.png")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                                .search-default.d-none
+                                                    .search-default__title
+                                                        h5 bangkok
+                                                    ul.search-default__content
+                                                        li
+                                                            a Hanoi (HAN)
+                                                        li
+                                                            a Ho Chi Minh city (SGN)
+                                                        li
+                                                            a Ban Me Thuot (BMV)
+                                                        li
+                                                            a Ca Mau (CAH)
+                                                        li
+                                                            a Can Tho (VCA)
+                                                        li
+                                                            a Chu Lai (VCL)
+                                                        li
+                                                            a Con Dao (VCS)
+                                                        li
+                                                            a Da Lat (DLI)
+                                                        li
+                                                            a Da Nang (DAD)
+                                                        li
+                                                            a Dien Bien Phu (DIN)
+                                                        li
+                                                            a Dong Hoi (VDH)
+                                                        li
+                                                            a Hai Phong (HPH)
+                                                        li
+                                                            a Hue (HUI)
+                                                        li
+                                                            a Nha Trang (CXR)
+                                                        li
+                                                            a Phu Quoc (PQC)
+                                                        li
+                                                            a Pleiku (PXU)
+                                                        li
+                                                            a Quy Nhon (UIH)
+                                                        li
+                                                            a Rach Gia (VKG)
+                                                        li
+                                                            a Thanh Hoa (THD)
+                                                        li
+                                                            a Vinh City (VII)
+
+
+
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input.flatpickr(type='text' placeholder='Select Date..')
+                                    .home-search__group.active
+                                        .home-search__trip
+                                            .home-search__input.home-search__go
+                                                label From
+                                                input(type='text', placeholder='Hanoi(HNA)')
+                                            .home-search__img
+                                                img(src="images/i-round.png")
+                                            .home-search__input.home-search__to
+                                                label To
+                                                input(type='text', placeholder='BangKok (BKK)')
+                                        .home-search__date
+                                            .home-search__input.home-search__depart
+                                                label Depart
+                                                input(type='text' placeholder='Select Date..')
+                                        .home-search__close
+                                            svg#Capa_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 51.976 51.976', xml:space='preserve')
+                                                g
+                                                    path(d='M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0\
+                                                                                                                C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778\
+                                                                                                                c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828\
+                                                                                                                c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828\
+                                                                                                                l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z')
+                                    .home-search__add
+                                        a.btn.btn-blue.btn-round(href='#') Add
+                                    .home-search__passenger
+                                        .home-search__input
+                                            label Passenger
+                                            input(type='text', value='2 Adults, 1 Child, 1 Infant')
+                                            ul.passenger-box.d-none
+                                                li
+                                                    p.p-left
+                                                        span Aldult &nbsp;|&nbsp;
+                                                        | 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Child &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                                li
+                                                    p.p-left
+                                                        span Infant &nbsp;|&nbsp;
+                                                        | Below - 12+ years
+                                                    p.p-right
+                                                        span.minus.btn-disable
+                                                            i.fas.fa-minus
+                                                        span.numb 1
+                                                        span.plus
+                                                            i.fas.fa-plus
+                                .home-search__btn
+                                    a.btn.btn-blue.btn-round(href="fly-list.html") Search Flight
+
+
+                .fly-home__offers
+                    .container
+                        .home-title
+                            h2 View Latest Offers Departing From Thailand
+                        .offers-slide
+                            .offers-slide__item
+                                .offers-item
+                                    .offers-item__trip
+                                        p Hanoi (HNA)
+                                        img(src='images/plane-icon.png')
+                                        p Bangkok(BKK)
+                                    .offers-item__info
+                                        p Depart: Wed, May 23
+                                        img(src='images/logo-vnairline.png')
+                                    .offers-item__detail
+                                        .offers-item__price
+                                            img(src='images/i-plane-lg.png')
+                                            p
+                                                | From
+                                                span $ 75
+                                        .offers-item__view
+                                            a(href='#') View all
+                            .offers-slide__item
+                                .offers-item
+                                    .offers-item__trip
+                                        p Hanoi (HNA)
+                                        img(src='images/plane-icon.png')
+                                        p Bangkok(BKK)
+                                    .offers-item__info
+                                        p Depart: Wed, May 23
+                                        img(src='images/logo-vnairline.png')
+                                    .offers-item__detail
+                                        .offers-item__price
+                                            img(src='images/i-plane-lg.png')
+                                            p
+                                                | From
+                                                span $ 75
+                                        .offers-item__view
+                                            a(href='#') View all
+                            .offers-slide__item
+                                .offers-item
+                                    .offers-item__trip
+                                        p Hanoi (HNA)
+                                        img(src='images/plane-icon.png')
+                                        p Bangkok(BKK)
+                                    .offers-item__info
+                                        p Depart: Wed, May 23
+                                        img(src='images/logo-vnairline.png')
+                                    .offers-item__detail
+                                        .offers-item__price
+                                            img(src='images/i-plane-lg.png')
+                                            p
+                                                | From
+                                                span $ 75
+                                        .offers-item__view
+                                            a(href='#') View all
+                            .offers-slide__item
+                                .offers-item
+                                    .offers-item__trip
+                                        p Hanoi (HNA)
+                                        img(src='images/plane-icon.png')
+                                        p Bangkok(BKK)
+                                    .offers-item__info
+                                        p Depart: Wed, May 23
+                                        img(src='images/logo-vnairline.png')
+                                    .offers-item__detail
+                                        .offers-item__price
+                                            img(src='images/i-plane-lg.png')
+                                            p
+                                                | From
+                                                span $ 75
+                                        .offers-item__view
+                                            a(href='#') View all
+                            .offers-slide__item
+                                .offers-item
+                                    .offers-item__trip
+                                        p Hanoi (HNA)
+                                        img(src='images/plane-icon.png')
+                                        p Bangkok(BKK)
+                                    .offers-item__info
+                                        p Depart: Wed, May 23
+                                        img(src='images/logo-vnairline.png')
+                                    .offers-item__detail
+                                        .offers-item__price
+                                            img(src='images/i-plane-lg.png')
+                                            p
+                                                | From
+                                                span $ 75
+                                        .offers-item__view
+                                            a(href='#') View all
+                .fly-home__deal
+                    .container
+                        .home-title
+                            h2 Special Deals
+                            p Happiness has no limit. FlyThaiAirways provides you special offers like no other. Enjoy at your own pace.
+                        .deal-slide
+                            .deal-slide__item
+                                .deal-item
+                                    .deal-item__img
+                                        img(src='images/deal1.png')
+                                    .deal-item__content
+                                        h4.deal-item__name Phuket
+                                        p.deal-item__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        .deal-item__bottom
+                                            .deal-item__price
+                                                p 200$
+                                            .deal-item__read
+                                                a(href='#') Read more
+                            .deal-slide__item
+                                .deal-item
+                                    .deal-item__img
+                                        img(src='images/deal2.png')
+                                    .deal-item__content
+                                        h4.deal-item__name Bangkok
+                                        p.deal-item__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        .deal-item__bottom
+                                            .deal-item__price
+                                                p 200$
+                                            .deal-item__read
+                                                a(href='#') Read more
+                            .deal-slide__item
+                                .deal-item
+                                    .deal-item__img
+                                        img(src='images/deal3.png')
+                                    .deal-item__content
+                                        h4.deal-item__name Pattaya City
+                                        p.deal-item__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        .deal-item__bottom
+                                            .deal-item__price
+                                                p 200$
+                                            .deal-item__read
+                                                a(href='#') Read more
+                            .deal-slide__item
+                                .deal-item
+                                    .deal-item__img
+                                        img(src='images/deal2.png')
+                                    .deal-item__content
+                                        h4.deal-item__name Bangkok
+                                        p.deal-item__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        .deal-item__bottom
+                                            .deal-item__price
+                                                p 200$
+                                            .deal-item__read
+                                                a(href='#') Read more
+        footer.fly-footer
+            .fly-footer__top(style='background-image: url(images/bg-footer.png);')
+                .container
+                    .footer-content
+                        .footer-content__col
+                            .footer-travel
+                                h5.footer-title TRAVEL
+                                p.p1 flythaiairways.vn offers schedule search, pricing check and reservation of Vietnam domestic and international flights. We are dedicated to bringing the best booking experience to domestic and international travelers with our English speaking consultants, user-friendly website and prompt confirmation.
+                                .footer-travel__phone
+                                    p.p1 Need help?
+                                    p.p2 +84.938.702.666
+                                    p.p1 Email: booking@flythaiairways.vn
+                                h5.footer-title FOLLOW US
+                                ul.footer-social
+                                    li
+                                        a(href='#')
+                                            i.fab.fa-facebook-f
+
+                                    li
+                                        a(href='#')
+                                            i.fab.fa-youtube
+
+                                    li
+                                        a(href='#')
+                                            i.fab.fa-instagram
+
+                        .footer-content__col
+                            .footer-subs
+                                h5.footer-title SUBSCRIBE
+                                ul.footer-subs__nav
+                                    li
+                                        a(href='#') How to Book
+                                    li
+                                        a(href='#') Contact Us
+                                    li
+                                        a(href='#') About Us
+                                    li
+                                        a(href='#') Privacy Policy
+                                    li
+                                        a(href='#') Before You Board
+                                    li
+                                        a(href='#') Terms of Use
+                                ul.footer-card
+                                    li
+                                        a(href='#')
+                                            img(src='images/card1.png')
+                                    li
+                                        a(href='#')
+                                            img(src='images/card2.png')
+                                    li
+                                        a(href='#')
+                                            img(src='images/card3.png')
+                        .footer-content__col
+                            .footer-form
+                                h5.footer-title SUBSCRIBE
+                            form
+                                .form-group
+                                    input.form-control(type='text' placeholder='Your name')
+                                .form-group
+                                    input.form-control(type='text' placeholder='Your Email Address')
+                                .form-group
+                                    textarea.form-control(type='text' placeholder='Your Messenger')
+                                .form-group
+                                    button.btn.btn-blue(type='button') Submit
+                        .footer-content__col
+                            h5.footer-title GALLERY
+                            ul.footer-gallery
+                                li
+                                    a(href='#')
+                                        img(src='images/deal1.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal2.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal3.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal1.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal2.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal3.png')
+                                li
+                                    a(href='#')
+                                        img(src='images/deal1.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal2.png')
+
+                                li
+                                    a(href='#')
+                                        img(src='images/deal3.png')
+
+            .fly-footer__bottom
+                .container
+                    p FlyThaiAirways.vn © 2018. All rights reserved.
         include jades/footer.jade
         script(type='text/javascript' src="js/jquery-3.3.1.min.js")
         script(type='text/javascript' src="js/popper.min.js")
@@ -17,6 +603,98 @@ html(lang="vi")
         script(type='text/javascript' src="js/flatpickr.js")
 
         script.
+            $('.home-search__go input').click(function () {
+                $(this).parents('.home-search__go').children('.search-default').toggleClass('d-none');
+                $('.home-search__to .search-default').addClass('d-none');
+            });
+            $('.home-search__to input').click(function () {
+                $(this).parents('.home-search__to').children('.search-default').toggleClass('d-none');
+                $('.home-search__go .search-default').addClass('d-none');
+            });
+            $('.home-search__passenger input').click(function () {
+                $('.passenger-box').toggleClass('d-none');
+            });
+        script.
+            $('#r1').click(function () {
+                $('.no-multi .home-search__return').removeClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r2').click(function () {
+                $('.no-multi .home-search__return').addClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r3').click(function () {
+                $('.multi').removeClass('d-none');
+                $('.no-multi').addClass('d-none');
+
+            });
+        script.
+            $('.home-search__depart input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+            $('.home-search__return input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+        script.
+            $(".offers-slide").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                autoplaySpeed: 5000,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        script.
+            $(".deal-slide").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                autoplaySpeed: 5000,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
 
 
 
