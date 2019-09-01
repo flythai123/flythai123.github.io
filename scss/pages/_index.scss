@@ -6,11 +6,43 @@
     background-size: cover;
     padding: 50px 0;
     margin-bottom: 50px;
+    position: relative;
     @include breakpoint(sm){
 
     }
     @include breakpoint(md){
 
+    }
+    &__text{
+      @include breakpoint(max-sm){
+        display: none;
+      }
+      position: absolute;
+      top: 200px;
+      right: 100px;
+      @include breakpoint(lg){
+        right: 200px;
+      }
+      h5{
+        color: #fff;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 500;
+        animation: tracking-in-translate 1.3s ease-in-out 1s both;
+        span{
+          font-size: 30px;
+          font-style: italic;
+        }
+      }
+      p{
+        font-size: 30px;
+        font-style: italic;
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 500;
+        animation: tracking-in-translate 1.3s ease-in-out 1s both;
+      }
     }
   }
   &__search {

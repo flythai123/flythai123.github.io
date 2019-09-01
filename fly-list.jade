@@ -1,0 +1,1522 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header.jade
+        main.wrapper
+            section.fly-list
+                .fly-list__banner(style='background-image: url(images/banner-fly.png);')
+                    .container
+                        .fly-list__info
+                            .fly-list__title
+                                h2 FLIGHTS LIST
+                                .fly-list__trip
+                                    .fly-list__trip__name
+                                        p Hanoi (HAN)
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='28', height='28', viewbox='0 0 28 28')
+                                            image( width='28', height='28', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfjCQEOOR9gumvdAAAByUlEQVQ4y5WUS0hUcRTGP8dHPlCchaASuVBS1Cwf2GqIBgkSF+5q1aJWuhAzxESCViFIixY+cBbtxpULwZIYWkiGyrg1CySzRN2IaBGF2q+F0/V/5z66ft/i3nsO3/mfe/7nHCEHc3hAoYvdRqepiXVOyDyvcAiA5f/J7MIG3kNQYQZKYUDD/171U6+1rTVt6qM25A6EqOcdXvhEnC6qnalWMkYQvOGuKQwJhRQEtzSlpG7aU73CQqBTAQbSizOoZ1a0X5rTrr5oT/v6oT/KVokq1Kqo8iUNalgSISvvayymoq54XEIJjwFoROIq5YbrCQBLPjdYD3xF4iGdNkcLnzk28nAyAlwXcabTHHncp8D4LnVIXxETfUC7b3tNkrAFEm2MiAskgbCP8DmwSYdhKaRdiCpgi6insCdV6wlyLVv49PEUgFnuUUe25cwgTB0RZqzL3+B2+lid9esOayRZYZVvHLh0zig59nns5Shg061zhzzzX6qI8TuguDq9EBfpZo5DX1GCBrPJTRSrSc2qUY0uqUyZhudEj/TibKy8mUU5L62z3nLZa8u5sT8l6/Pacl6MAfPU2q1B1sZ3jeuGPrhtOX+2UuS0/gWiHmp1cZFyJQAAAABJRU5ErkJggg==')
+                                        p Bangkok (BKK)
+
+                                    .fly-list__trip__date
+                                        p December, 2018
+                                        p 1 Adult(s)
+
+
+                            .booking-box
+                                .booking-box__btn
+                                    span BOOK YOUR FLIGHTS
+                                    i.fas.fa-caret-right
+                                .booking-box__dropdown
+                                    .booking-info
+                                        .booking-info__item
+                                            p.p1 1 Traveler/s
+                                            p.p2 1 adult
+                                        .booking-info__item
+                                            p.p3 Fri 14 Dec 2018
+                                            p.p3 10:47 Hanoi (HAN)
+                                            p.p3 10:50 +1 Day Bangkok (BKK)
+                                            p.p3 Total duration 18h03m, 2 stops
+                                            p.blue-2 Economy Flex
+                                        .booking-info__item
+                                            p.p3 Wed 19 Dec 2018
+                                            p.p3 12:20 Bangkok (BKK)
+                                            p.p3 19:45 Hanoi (HAN)
+                                            p.p3 Total duration 13h25m, 1 stop
+                                            p.blue-2 Economy Flex
+                                            p.pnote
+                                                span Note:
+                                                | Your return flight departs from Heathrow whereas you arrive at Gatwick on your inbound flight.
+                                        .booking-info__total
+                                            .d-flex
+                                                p.p1 Total
+                                                p.p1 USD 4,936,00
+                                            .d-flex
+                                                p.p2 1 Adult
+                                                p.p2 USD 2,624.37
+                                            p.p3 Round trip price for all travelers (including taxes, fees, charges and air transportation)
+                                        .booking-info__btn
+                                            a(href='#') continue
+
+
+                .fly-list__body
+                    .container
+                        .fly-list__main
+                            // chieu di
+                            .fly-list__item
+                                .fly-item
+                                    .fly-item__title
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                        h5 Outbound Flight
+                                    .fly-item__slide
+                                        .date-slide
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p2 Not available
+                                            .date-slide__col
+                                                .date-slide__item.active
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                    //mobile
+                                    .fly-item__mobile
+                                        .ticket-box
+                                            .ticket-box__header
+                                                .trip-box
+                                                    .trip-box__start
+                                                        p.p1 07:35AM
+                                                        p.p2 hanoi (han)
+                                                        p.p1 Hanoi, Vietnam
+                                                    .trip-box__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                        p.p1 8h 40m
+                                                        .dot
+                                                        p.p2 Non-Stop
+                                                    .trip-box__end
+                                                        p.p1 08:35AM
+                                                        p.p2 bangkok (bkk)
+                                                        p.p1 Bangkok, Thailand
+                                                .ticket-box__show
+                                                    p.p-show-detail
+                                                        i.fas.fa-caret-right
+                                                        span More details
+                                            .ticket-box__detail
+                                                .detail-box
+                                                    .detail-box__title
+                                                        h5 Flight Details
+                                                    .detail-box__name
+                                                        p Departure: Hanoi - Bangkok
+                                                    .detail-box__item
+                                                        .detail-box__airline
+                                                            img(src='images/offers-logo.png')
+                                                            p
+                                                                | Vietnam Airlines
+                                                                span VN 123
+                                                        .detail-box__trip
+                                                            .trip-box
+                                                                .trip-box__start
+                                                                    p Hanoi, Vietnam
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Hanoi (HAN) Vietnam
+                                                                .trip-box__line
+                                                                    p.p1 03h 50m
+                                                                    .straight-line
+                                                                    p.p2 980 miles
+                                                                .trip-box__end
+                                                                    p Bangkok, Thailand
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Bangkok (BKK) Thailand
+                                                    .detail-box__time
+                                                        p Layover: LHR London. Time: 20h50m
+                                                    .detail-box__item
+                                                        .detail-box__airline
+                                                            img(src='images/offers-logo.png')
+                                                            p
+                                                                | Vietnam Airlines
+                                                                span VN 123
+                                                        .detail-box__trip
+                                                            .trip-box
+                                                                .trip-box__start
+                                                                    p Hanoi, Vietnam
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Hanoi (HAN) Vietnam
+                                                                .trip-box__line
+                                                                    p.p1 03h 50m
+                                                                    .straight-line
+                                                                    p.p2 980 miles
+                                                                .trip-box__end
+                                                                    p Bangkok, Thailand
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Bangkok (BKK) Thailand
+                                            .ticket-box__main
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type(data-toggle="modal" data-target="#seatItem" type='button')
+                                                        p Trip Duration
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        p.p-soldout Sold out
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                        p Low Bubget
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                          c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                        p Eco Promotion
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 1.579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                        p Economy Saver
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                        p Economy Flex
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 1.579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItem")
+                                                        p Premium Economy
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            #seatItem.modal.fade
+                                                .modal-dialog
+                                                    .modal-content
+                                                        .modal-body
+                                                            button.close(type='button', data-dismiss='modal') ×
+                                                            table.table-bordered
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Carry - on baggage
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p 1 x 22 lbs
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Request your seat
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span In-flight entertainment
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Saga Points
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Checked baggage
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Meal
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Changeable ticket
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Refundable
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Lounge
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                    // end mobile
+
+                                    // desktop
+                                    .fly-item__desktop
+                                        .ticket-table
+                                            .ticket-table__header
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        p Sort by
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Trip Duration
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Low Budget
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Eco Promotion
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Economy Saver
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Economy Flex
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Premium Economy
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                            .ticket-table__collapse
+                                                h5 WHAT'S INCLUDED IN MY FARE ON ICELANDAIR FLIGHTS?
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .icon-box
+                                                            p
+                                                                span Carry-on baggage
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Request your seat
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span In-flight entertainment
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Saga Points
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Checked baggage
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Meat
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Changeable ticket
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Refundable
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Lounge Access
+                                                                i.fas.fa-suitcase
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Trip Duration
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Low Budget
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Eco Promotion
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Economy Saver
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Economy Flex
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Premium Economy
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                            .ticket-table__body
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p1 07:35AM
+                                                                p.p2 hanoi (han)
+                                                                p.p1 Hanoi, Vietnam
+                                                            .trip-box__icon
+                                                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                                    image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                                p.p1 8h 40m
+                                                                .dot
+                                                                p.p2 Non-Stop
+                                                            .trip-box__end
+                                                                p.p1 08:35AM
+                                                                p.p2 bangkok (bkk)
+                                                                p.p1 Bangkok, Thailand
+                                                        .ticket-table__show
+                                                            p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                                                i.fas.fa-caret-right
+                                                                span More details
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p1 07:35AM
+                                                                p.p2 hanoi (han)
+                                                                p.p1 Hanoi, Vietnam
+                                                            .trip-box__icon
+                                                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                                    image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                                p.p1 8h 40m
+                                                                .dot
+                                                                p.p2 Non-Stop
+                                                            .trip-box__end
+                                                                p.p1 08:35AM
+                                                                p.p2 bangkok (bkk)
+                                                                p.p1 Bangkok, Thailand
+                                                        .ticket-table__show
+                                                            p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                                                i.fas.fa-caret-right
+                                                                span More details
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                    //end desktop
+                            // end chieu di
+
+                            // chieu ve
+                            .fly-list__item
+                                .fly-item
+                                    .fly-item__title
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                        h5 Inbound Flight
+                                    .fly-item__slide
+                                        .date-slide
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p2 Not available
+                                            .date-slide__col
+                                                .date-slide__item.active
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                            .date-slide__col
+                                                .date-slide__item
+                                                    .date-slide__text
+                                                        p.p1 sunday 11 dec
+                                                        p.p2 from USD
+                                                        p.p3 579.58
+                                    //mobile
+                                    .fly-item__mobile
+                                        .ticket-box
+                                            .ticket-box__header
+                                                .trip-box
+                                                    .trip-box__start
+                                                        p.p1 07:35AM
+                                                        p.p2 hanoi (han)
+                                                        p.p1 Hanoi, Vietnam
+                                                    .trip-box__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                        p.p1 8h 40m
+                                                        .dot
+                                                        p.p2 Non-Stop
+                                                    .trip-box__end
+                                                        p.p1 08:35AM
+                                                        p.p2 bangkok (bkk)
+                                                        p.p1 Bangkok, Thailand
+                                                .ticket-box__show
+                                                    p.p-show-detail
+                                                        i.fas.fa-caret-right
+                                                        span More details
+                                            .ticket-box__detail
+                                                .detail-box
+                                                    .detail-box__title
+                                                        h5 Flight Details
+                                                    .detail-box__name
+                                                        p Departure: Hanoi - Bangkok
+                                                    .detail-box__item
+                                                        .detail-box__airline
+                                                            img(src='images/offers-logo.png')
+                                                            p
+                                                                | Vietnam Airlines
+                                                                span VN 123
+                                                        .detail-box__trip
+                                                            .trip-box
+                                                                .trip-box__start
+                                                                    p Hanoi, Vietnam
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Hanoi (HAN) Vietnam
+                                                                .trip-box__line
+                                                                    p.p1 03h 50m
+                                                                    .straight-line
+                                                                    p.p2 980 miles
+                                                                .trip-box__end
+                                                                    p Bangkok, Thailand
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Bangkok (BKK) Thailand
+                                                    .detail-box__time
+                                                        p Layover: LHR London. Time: 20h50m
+                                                    .detail-box__item
+                                                        .detail-box__airline
+                                                            img(src='images/offers-logo.png')
+                                                            p
+                                                                | Vietnam Airlines
+                                                                span VN 123
+                                                        .detail-box__trip
+                                                            .trip-box
+                                                                .trip-box__start
+                                                                    p Hanoi, Vietnam
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Hanoi (HAN) Vietnam
+                                                                .trip-box__line
+                                                                    p.p1 03h 50m
+                                                                    .straight-line
+                                                                    p.p2 980 miles
+                                                                .trip-box__end
+                                                                    p Bangkok, Thailand
+                                                                    p Nov 10, 08:00 PM
+                                                                    p Bangkok (BKK) Thailand
+                                            .ticket-box__main
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type(data-toggle="modal" data-target="#seatItemBack" type='button')
+                                                        p Trip Duration
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        p.p-soldout Sold out
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItemBack")
+                                                        p Low Bubget
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                      c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItemBack")
+                                                        p Eco Promotion
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 1.579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItemBack")
+                                                        p Economy Saver
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                  c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-brown
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItemBack")
+                                                        p Economy Flex
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                              c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                                .ticket-box__item.item-orange
+                                                    .ticket-box__left
+                                                        .ticket-box__check
+                                                            i.fas.fa-check
+                                                        .ticket-box__price
+                                                            p.p1 USD
+                                                            p.p2 1.579.58
+                                                        .ticket-box__chair
+                                                            p 3 Seat (8) Left
+                                                    button.ticket-box__type( type='button' data-toggle="modal" data-target="#seatItemBack")
+                                                        p Premium Economy
+                                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52 52', xml:space='preserve')
+                                                            path(d='M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M28,41c0,1.104-0.896,2-2,2s-2-0.896-2-2v-2\
+                                                                                                                                                                                                                                              c0-1.104,0.896-2,2-2s2,0.896,2,2V41z M28,33c0,1.104-0.896,2-2,2s-2-0.896-2-2V11c0-1.104,0.896-2,2-2s2,0.896,2,2V33z')
+
+                                            #seatItemBack.modal.fade
+                                                .modal-dialog
+                                                    .modal-content
+                                                        .modal-body
+                                                            button.close(type='button', data-dismiss='modal') ×
+                                                            table.table-bordered
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Carry - on baggage
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p 1 x 22 lbs
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Request your seat
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span In-flight entertainment
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Saga Points
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Checked baggage
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            i.fas.fa-check
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Meal
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Changeable ticket
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Refundable
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                                                tr
+                                                                    th
+                                                                        p
+                                                                            span Lounge
+                                                                            i.fas.fa-suitcase
+                                                                    td
+                                                                        p
+                                                                            | &nbsp;
+
+
+                                    // end mobile
+
+                                    // desktop
+                                    .fly-item__desktop
+                                        .ticket-table
+                                            .ticket-table__header
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        p Sort by
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Trip Duration
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Low Budget
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Eco Promotion
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Economy Saver
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Economy Flex
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__type
+                                                                p.p1 Premium Economy
+                                                                p.p2
+                                                                    i.fas.fa-suitcase
+                                                                    span 30kg
+                                            .ticket-table__collapse
+                                                h5 WHAT'S INCLUDED IN MY FARE ON ICELANDAIR FLIGHTS?
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .icon-box
+                                                            p
+                                                                span Carry-on baggage
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Request your seat
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span In-flight entertainment
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Saga Points
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Checked baggage
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Meat
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Changeable ticket
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Refundable
+                                                                i.fas.fa-suitcase
+                                                            p
+                                                                span Lounge Access
+                                                                i.fas.fa-suitcase
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Trip Duration
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Low Budget
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Eco Promotion
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Economy Saver
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Economy Flex
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .seat-item
+                                                                .seat-item__title
+                                                                    p Premium Economy
+                                                                .seat-item__content
+                                                                    p 1 x 22 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        i.fas.fa-check
+                                                                    p
+                                                                        | 1 x 50 lbs
+                                                                    p
+                                                                        i.fas.fa-check
+                                            .ticket-table__body
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p1 07:35AM
+                                                                p.p2 hanoi (han)
+                                                                p.p1 Hanoi, Vietnam
+                                                            .trip-box__icon
+                                                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                                    image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                                p.p1 8h 40m
+                                                                .dot
+                                                                p.p2 Non-Stop
+                                                            .trip-box__end
+                                                                p.p1 08:35AM
+                                                                p.p2 bangkok (bkk)
+                                                                p.p1 Bangkok, Thailand
+                                                        .ticket-table__show
+                                                            p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                                                i.fas.fa-caret-right
+                                                                span More details
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                .ticket-table__row
+                                                    .ticket-table__left
+                                                        .trip-box
+                                                            .trip-box__start
+                                                                p.p1 07:35AM
+                                                                p.p2 hanoi (han)
+                                                                p.p1 Hanoi, Vietnam
+                                                            .trip-box__icon
+                                                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                                                    image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                                                p.p1 8h 40m
+                                                                .dot
+                                                                p.p2 Non-Stop
+                                                            .trip-box__end
+                                                                p.p1 08:35AM
+                                                                p.p2 bangkok (bkk)
+                                                                p.p1 Bangkok, Thailand
+                                                        .ticket-table__show
+                                                            p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                                                i.fas.fa-caret-right
+                                                                span More details
+                                                    .ticket-table__right
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                                        .ticket-table__col.col_6
+                                                            .ticket-table__cell
+                                                                .d-block
+                                                                    p.p1 USD
+                                                                    p.p2 579.85
+                                                                    p.p3 3 Seat (8) Left
+                                                                    .ticket-table__check
+                                                                        i.fas.fa-check
+                                    //end desktop
+
+                            // end chieu ve
+                        .fly-list__btn
+                            a.btn.btn-blue.btn-round(href='fly-checkout.html') Continue
+                        #flightDetail.modal.fade
+                            .modal-dialog
+                                .modal-content
+                                    .modal-body
+                                        button.close(type='button', data-dismiss='modal') ×
+                                        .detail-box
+                                            .detail-box__title
+                                                h5 Flight Details
+                                            .detail-box__name
+                                                p Departure: Hanoi - Bangkok
+                                            .detail-box__item
+                                                .detail-box__airline
+                                                    img(src='images/offers-logo.png')
+                                                    p
+                                                        | Vietnam Airlines
+                                                        span VN 123
+                                                .detail-box__trip
+                                                    .trip-box
+                                                        .trip-box__start
+                                                            p Hanoi, Vietnam
+                                                            p Nov 10, 08:00 PM
+                                                            p Hanoi (HAN) Vietnam
+                                                        .trip-box__line
+                                                            p.p1 03h 50m
+                                                            .straight-line
+                                                            p.p2 980 miles
+                                                        .trip-box__end
+                                                            p Bangkok, Thailand
+                                                            p Nov 10, 08:00 PM
+                                                            p Bangkok (BKK) Thailand
+                                            .detail-box__time
+                                                p Layover: LHR London. Time: 20h50m
+                                            .detail-box__item
+                                                .detail-box__airline
+                                                    img(src='images/offers-logo.png')
+                                                    p
+                                                        | Vietnam Airlines
+                                                        span VN 123
+                                                .detail-box__trip
+                                                    .trip-box
+                                                        .trip-box__start
+                                                            p Hanoi, Vietnam
+                                                            p Nov 10, 08:00 PM
+                                                            p Hanoi (HAN) Vietnam
+                                                        .trip-box__line
+                                                            p.p1 03h 50m
+                                                            .straight-line
+                                                            p.p2 980 miles
+                                                        .trip-box__end
+                                                            p Bangkok, Thailand
+                                                            p Nov 10, 08:00 PM
+                                                            p Bangkok (BKK) Thailand
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script(type='text/javascript' src="js/slick.min.js")
+        script(type='text/javascript' src="js/flatpickr.js")
+
+        script.
+            $('.home-search__go input').click(function () {
+                $(this).parents('.home-search__go').children('.search-default').toggleClass('d-none');
+                $('.home-search__to .search-default').addClass('d-none');
+            });
+            $('.home-search__to input').click(function () {
+                $(this).parents('.home-search__to').children('.search-default').toggleClass('d-none');
+                $('.home-search__go .search-default').addClass('d-none');
+            });
+            $('.home-search__passenger input').click(function () {
+                $('.passenger-box').toggleClass('d-none');
+            });
+        script.
+            $('#r1').click(function () {
+                $('.no-multi .home-search__return').removeClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r2').click(function () {
+                $('.no-multi .home-search__return').addClass('d-hidden');
+                $('.multi').addClass('d-none');
+                $('.no-multi').removeClass('d-none');
+            });
+            $('#r3').click(function () {
+                $('.multi').removeClass('d-none');
+                $('.no-multi').addClass('d-none');
+
+            });
+        script.
+            $('.home-search__depart input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+            $('.home-search__return input').flatpickr({
+                altInput: false,
+                disableMobile: true,
+                dateFormat: 'D, d-m-Y',
+                minDate: 'today'
+            });
+        script.
+            $('.date-slide').slick({
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        script.
+            $('.ticket-table__cell').click(function () {
+                $('.ticket-table__cell').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('.ticket-box__check').click(function () {
+                $('.ticket-box__item').removeClass('active');
+                $(this).parents('.ticket-box__item').addClass('active');
+            });
+        script.
+            $('.ticket-table__type').click(function () {
+                $(this).parents('.ticket-table').find('.ticket-table__collapse').slideToggle(400);
+            });
+        script.
+            $('.ticket-box__show .p-show-detail').click(function () {
+                $(this).parents('.ticket-box').find('.ticket-box__detail').slideToggle(400);
+                $(this).parents('.ticket-box').toggleClass('open-detail');
+            });
+        script.
+            $('.booking-box__btn').click(function () {
+                $('.booking-box__dropdown').slideToggle(400);
+                $('.booking-box').toggleClass('open-dropdown');
+            });
+
+
+
+
+
+
+
+
+
