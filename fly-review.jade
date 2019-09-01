@@ -1,0 +1,346 @@
+- var page = "fly-review";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+
+    body(ontouchstart='')
+        include jades/header.jade
+        main.wrapper
+            section.fly-review
+                .fly-list__banner(style='background-image: url(images/banner-fly.png);')
+                    .container
+                        .fly-list__info
+                            .fly-list__title
+                                h2 FLIGHTS REVIEW
+                                .fly-list__trip
+                                    .fly-list__trip__name
+                                        p Hanoi (HAN)
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='28', height='28', viewbox='0 0 28 28')
+                                            image( width='28', height='28', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfjCQEOOR9gumvdAAAByUlEQVQ4y5WUS0hUcRTGP8dHPlCchaASuVBS1Cwf2GqIBgkSF+5q1aJWuhAzxESCViFIixY+cBbtxpULwZIYWkiGyrg1CySzRN2IaBGF2q+F0/V/5z66ft/i3nsO3/mfe/7nHCEHc3hAoYvdRqepiXVOyDyvcAiA5f/J7MIG3kNQYQZKYUDD/171U6+1rTVt6qM25A6EqOcdXvhEnC6qnalWMkYQvOGuKQwJhRQEtzSlpG7aU73CQqBTAQbSizOoZ1a0X5rTrr5oT/v6oT/KVokq1Kqo8iUNalgSISvvayymoq54XEIJjwFoROIq5YbrCQBLPjdYD3xF4iGdNkcLnzk28nAyAlwXcabTHHncp8D4LnVIXxETfUC7b3tNkrAFEm2MiAskgbCP8DmwSYdhKaRdiCpgi6insCdV6wlyLVv49PEUgFnuUUe25cwgTB0RZqzL3+B2+lid9esOayRZYZVvHLh0zig59nns5Shg061zhzzzX6qI8TuguDq9EBfpZo5DX1GCBrPJTRSrSc2qUY0uqUyZhudEj/TibKy8mUU5L62z3nLZa8u5sT8l6/Pacl6MAfPU2q1B1sZ3jeuGPrhtOX+2UuS0/gWiHmp1cZFyJQAAAABJRU5ErkJggg==')
+                                        p Bangkok (BKK)
+
+                                    .fly-list__trip__date
+                                        p December, 2018
+                                        p 1 Adult(s)
+
+
+                            .booking-box
+                                .booking-box__btn
+                                    span BOOK YOUR FLIGHTS
+                                    i.fas.fa-caret-right
+                                .booking-box__dropdown
+                                    .booking-info
+                                        .booking-info__item
+                                            p.p1 1 Traveler/s
+                                            p.p2 1 adult
+                                        .booking-info__item
+                                            p.p3 Fri 14 Dec 2018
+                                            p.p3 10:47 Hanoi (HAN)
+                                            p.p3 10:50 +1 Day Bangkok (BKK)
+                                            p.p3 Total duration 18h03m, 2 stops
+                                            p.blue-2 Economy Flex
+                                        .booking-info__item
+                                            p.p3 Wed 19 Dec 2018
+                                            p.p3 12:20 Bangkok (BKK)
+                                            p.p3 19:45 Hanoi (HAN)
+                                            p.p3 Total duration 13h25m, 1 stop
+                                            p.blue-2 Economy Flex
+                                            p.pnote
+                                                span Note:
+                                                | Your return flight departs from Heathrow whereas you arrive at Gatwick on your inbound flight.
+                                        .booking-info__total
+                                            .d-flex
+                                                p.p1 Total
+                                                p.p1 USD 4,936,00
+                                            .d-flex
+                                                p.p2 1 Adult
+                                                p.p2 USD 2,624.37
+                                            p.p3 Round trip price for all travelers (including taxes, fees, charges and air transportation)
+                                        .booking-info__btn
+                                            a(href='#') continue
+
+
+                .fly-review__main
+                    .container
+                        .fly-review__price
+                            .price-box
+                                .box-title
+                                    p Price
+                                .price-box__content
+                                    .price-box__group.group-left
+                                        .price-box__total
+                                            .price-box__item
+                                                .item-left
+                                                    p.p1 TOTAL
+                                                    p.p2 Round trip price for all travelers (including taxes, fees, charges and air transportation charges. Optional service fees)
+                                                .item-right
+                                                    p.p1
+                                                        | USD&nbsp;
+                                                        span.blue-2 4,936.0
+                                        .price-box__item
+                                            .item-left
+                                                p.p3 Air Transportation Charges
+                                            .item-right
+                                                p.p3 USD 4,744.0
+                                        .price-box__item
+                                            .item-left
+                                                p.p3 Taxes, Fees And Charges
+                                            .item-right
+                                                p.p3 USD 192.0
+                                    .price-box__group.group-right
+                                        .price-box__item
+                                            .item-left
+                                                p.p1 PRICE DETAILS
+                                            .item-right
+                                                p.p1 USD 4,936.0
+                                        .price-box__item
+                                            .item-left
+                                                p.blue-2.p3 1 Adult
+                                            .item-right
+                                                p.blue-2.p3 USD 4,936.0
+
+                        .fly-review__itinerary
+                            .itinerary-box
+                                .box-title
+                                    p Itinerary
+                                .itinerary-box__content
+                                    .itinerary-box__content__top
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                        .itinerary-box__content__from
+                                            p Hanoi (HAN) - Bangkok (BKK)
+                                            span Thursday 20 December 2018
+                                    .itinerary-box__content__middle
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                        .itinerary-box__content__place
+                                            .place-left
+                                                i.far.fa-clock
+                                                span STOP
+                                            .place-right
+                                                span 10h10m
+                                                span Noibai International Airpot
+
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                    .itinerary-box__content__bottom
+                                        p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                            i.fas.fa-caret-right
+                                            span More details
+                                        p.text-right.blue-2 Total Duration 13h55m, 1 stop
+                        .fly-review__itinerary
+                            .itinerary-box
+                                .box-title
+                                    p Itinerary
+                                .itinerary-box__content
+                                    .itinerary-box__content__top
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='34', height='20', viewbox='0 0 34 20')
+                                            image( width='34', height='20', xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAUCAMAAADfuh9AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QQh7QAAAAzo+K9AAAAVnRSTlMAUZ98AjCx+NpFD481bOp3SM4zHkY/PESo5Qt9hQrM/awnDHjmzUsIOXHi62tq9JISNq37tTcEutRQMeSwMiCY9Rj2/psbGaO9OEfT4Fz8+oEGJL+2SZVjk7oAAAABYktHRFd9CtkfAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4wgeDSQPtT3HhQAAAMdJREFUKM9jYMAHGJmYWfAqYGBlY+fgxKeAizsMBHhwq+DlA6sI48elQEAwDAqEgDxhEVE0ICYuAVMgCXSLlHQYHiAjCzJDTh6nAgVFqLVKospsKlgUqKqhuE5dQ1NBC0WBtg42X8jq6sFV6Btg9aihkTFUgYkQioQppxmENoeZYGGJqtUqLMzaht/Wzh6mwAEjOB2VnUASzjAVLq5YnODmjvCHhyeOCPHyhijw8cUT8dJ+YWH+AYH40gZDUHCIHQMBwBiKSwYArVlMAgND/6IAAAAASUVORK5CYII=')
+                                        .itinerary-box__content__from
+                                            p Hanoi (HAN) - Bangkok (BKK)
+                                            span Thursday 20 December 2018
+                                    .itinerary-box__content__middle
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                        .itinerary-box__content__place
+                                            .place-left
+                                                i.far.fa-clock
+                                                span STOP
+                                            .place-right
+                                                span 10h10m
+                                                span Noibai International Airpot
+
+                                        .itinerary-box__content__group
+                                            .itinerary-box__content__left
+                                                p
+                                                    span 16:00:&nbsp;
+                                                    | HaNoi
+                                                p Hanoi Ft Worth International (DFW)
+                                                p Terminal D
+                                                p 06:00 +1 Day Reykjavik
+                                                p Noibai International (KEF)
+                                            .itinerary-box__content__right
+                                                .itinerary-box__content__detail
+                                                    p Duration&nbsp;
+                                                    span 8h00m
+                                                .itinerary-box__content__detail
+                                                    p Airline:&nbsp;
+                                                    span Icelandair (FI 872)
+                                                .itinerary-box__content__detail
+                                                    p Aircraft:&nbsp;
+                                                    span Boeing 757-200
+
+                                    .itinerary-box__content__bottom
+                                        p.p-show-detail(data-toggle="modal" data-target="#flightDetail")
+                                            i.fas.fa-caret-right
+                                            span More details
+                                        p.text-right.blue-2 Total Duration 13h55m, 1 stop
+                        .fly-review__adult
+                            .adult-box
+                                .box-title
+                                    p 1 Traveler/s (1 adult)
+                                .adult-box__content
+                                    .adult-box__content__left
+                                        p Adult
+                                    .adult-box__content__right
+                                        p Contact Information
+
+                        .fly-review__baggage
+                            .baggage-box
+                                .box-title
+                                    p Baggage
+                                .baggage-box__content
+                                    .baggage-box__content__top
+                                        p.p1 Traveler 1 (Adult)
+                                        p.p2 Hanoi (HAN) - Bangkok (BKK)
+                                    .baggage-box__content__group
+                                        .baggage-box__content__item
+                                            p.p3 Ha Noi - Bang Kok
+                                            .baggage-item
+                                                .baggage-item__left
+                                                    span 1
+                                                    i.fas.fa-suitcase
+                                                .baggage-item__right
+                                                    p CARRY-ON BAG, 1 INCLUDED
+                                                    span Carry10kg 22lbupto 45li 115lcm
+                                                    span Most Significant Carrier is FI (Icelandair)‎
+                                        .baggage-box__content__item
+                                            p.p3 Ha Noi - Bang Kok
+                                            .baggage-item
+                                                .baggage-item__left
+                                                    span 1
+                                                    i.fas.fa-suitcase
+                                                .baggage-item__right
+                                                    p CARRY-ON BAG, 1 INCLUDED
+                                                    span Carry10kg 22lbupto 45li 115lcm
+                                                    span Most Significant Carrier is FI (Icelandair)‎
+
+
+                                    .baggage-box__attention
+                                        p.bold Baggage allowance and charges are applied for the whole trip.
+                                        span Baggage allowance and fees are provided for information only.
+                                        span Additional allowance may apply depending on the traveler's individual passenger status  (e.g. Saga Club membership)
+
+
+                        .fly-checkout__btn
+                            a.btn.btn-blue.btn-round Continue
+            #flightDetail.modal.fade
+                .modal-dialog
+                    .modal-content
+                        .modal-body
+                            button.close(type='button', data-dismiss='modal') ×
+                            .detail-box
+                                .detail-box__title
+                                    h5 Flight Details
+                                .detail-box__name
+                                    p Departure: Hanoi - Bangkok
+                                .detail-box__item
+                                    .detail-box__airline
+                                        img(src='images/offers-logo.png')
+                                        p
+                                            | Vietnam Airlines
+                                            span VN 123
+                                    .detail-box__trip
+                                        .trip-box
+                                            .trip-box__start
+                                                p Hanoi, Vietnam
+                                                p Nov 10, 08:00 PM
+                                                p Hanoi (HAN) Vietnam
+                                            .trip-box__line
+                                                p.p1 03h 50m
+                                                .straight-line
+                                                p.p2 980 miles
+                                            .trip-box__end
+                                                p Bangkok, Thailand
+                                                p Nov 10, 08:00 PM
+                                                p Bangkok (BKK) Thailand
+                                .detail-box__time
+                                    p Layover: LHR London. Time: 20h50m
+                                .detail-box__item
+                                    .detail-box__airline
+                                        img(src='images/offers-logo.png')
+                                        p
+                                            | Vietnam Airlines
+                                            span VN 123
+                                    .detail-box__trip
+                                        .trip-box
+                                            .trip-box__start
+                                                p Hanoi, Vietnam
+                                                p Nov 10, 08:00 PM
+                                                p Hanoi (HAN) Vietnam
+                                            .trip-box__line
+                                                p.p1 03h 50m
+                                                .straight-line
+                                                p.p2 980 miles
+                                            .trip-box__end
+                                                p Bangkok, Thailand
+                                                p Nov 10, 08:00 PM
+                                                p Bangkok (BKK) Thailand
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script.
+            $('.booking-box__btn').click(function () {
+                $('.booking-box__dropdown').slideToggle(400);
+                $('.booking-box').toggleClass('open-dropdown');
+            });
+
+
+
+
