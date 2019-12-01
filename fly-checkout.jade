@@ -333,6 +333,12 @@ html(lang="vi")
                 $(this).parents('.form-checkout__freq').toggleClass('rotate');
                 $(this).parents('.form-checkout__freq').find('.row-card').slideToggle(400);
             });
+        script.
+            if (screen.width <= 767) {
+                $('.nav-item').click(function () {
+                    $(this).find('.navbar-sub').slideToggle(400);
+                });
+            }
 
 
 

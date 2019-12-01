@@ -248,22 +248,26 @@
     }
     .straight-line{
       width: 100%;
-      height: 2px;
-      background-color: #231f20;
+      height: 3px;
+      background-color: #ccc;
       position: relative;
-      &:before{
-        content: '●';
+      &:before,
+      &:after{
+        content: '\f3c5';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
         position: absolute;
-        top: -4px;
-        left: -5px;
+        top: -3px;
         line-height: 8px;
+        color: #ccc;
+      }
+      &:before{
+        left: -10px;
+        transform: rotate(-90deg);
       }
       &:after{
-        content: '●';
-        position: absolute;
-        top: -4px;
-        right: -5px;
-        line-height: 8px;
+        right: -10px;
+        transform: rotate(90deg);
       }
     }
   }
@@ -273,10 +277,12 @@
     margin-bottom: 20px;
     h5{
       font-size: 18px;
-      color: #000;
+      color: #22374f;
       font-weight: bold;
-      padding: 0;
       margin: 0;
+      padding: 0 0 5px;
+      display: inline-block;
+      border-bottom: 2px solid #22374f;
     }
   }
   &__name{

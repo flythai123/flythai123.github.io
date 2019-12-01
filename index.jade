@@ -632,6 +632,12 @@ html(lang="vi")
                     }
                 ]
             });
+        script.
+            if (screen.width <= 767) {
+                $('.nav-item').click(function () {
+                    $(this).find('.navbar-sub').slideToggle(400);
+                });
+            }
 
 
 

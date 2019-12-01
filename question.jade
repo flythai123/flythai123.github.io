@@ -1,0 +1,66 @@
+- var page = "booking";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+
+    body(ontouchstart='')
+        include jades/header.jade
+        main.wrapper
+            section.fly-setting
+                .container
+                    .fly-setting__row
+                        .fly-setting__left
+                            ul.sidebar
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Manage Booking
+
+                                li.sidebar__item.active
+                                    a.sidebar__link(href='#') Booking Status
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Fare Types
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Payment Guide
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Refund Request
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Booking Change
+
+                        .fly-setting__right
+                            .fly-setting__box.fly-question
+                                .fly-setting__title
+                                    h5 Ask a question
+                                .fly-question__form
+                                    .form-group
+                                        label Your name
+                                        input.form-control(type='text')
+                                    .form-group
+                                        label Your e-mail address
+                                        input.form-control(type='text')
+                                    .form-group
+                                        label Phone number
+                                        input.form-control(type='text')
+                                    .form-group
+                                        label Subject
+                                        select.form-control
+                                            option Ask a question?
+                                            option Ask a question abcd 12345?
+                                            option Ask a question alo picaso how are you?
+                                    .form-group
+                                        label Message
+                                        textarea.form-control
+                                .fly-setting__btn
+                                    button.btn.btn-blue(type='button') Send Message
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script(type='text/javascript' src="js/slick.min.js")
+
+
+
+

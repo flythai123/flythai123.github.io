@@ -21,7 +21,49 @@
               <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Book your trip</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Flight Info</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Before your fly</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Before your fly</a>
+                <ul class="navbar-sub">
+                  <li class="navbar-sub__item">
+                    <div class="navbar-sub__title">
+                      <h5>Book & manage</h5>
+                    </div>
+                    <ul>
+                      <li><a href="#">Book a flight</a></li>
+                      <li><a href="#">Manage your booking</a></li>
+                      <li><a href="#">Check-in</a></li>
+                      <li><a href="#">Flight status</a></li>
+                      <li><a href="#">Mobile app</a></li>
+                      <li><a href="#">Any questions?</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-sub__item">
+                    <div class="navbar-sub__title">
+                      <h5>PREPARE YOUR TRIP</h5>
+                    </div>
+                    <ul>
+                      <li><a href="#">Baggage information</a></li>
+                      <li><a href="#">Check-in information</a></li>
+                      <li><a href="#">Special assistance</a></li>
+                      <li><a href="#">Infants&children</a></li>
+                      <li><a href="#">Traveling with pets</a></li>
+                      <li><a href="#">Transfer/Transit passengers</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-sub__item">
+                    <div class="navbar-sub__title">
+                      <h5>ADDITIONAL SERVICES</h5>
+                    </div>
+                    <ul>
+                      <li><a href="#">Rent a car</a></li>
+                      <li><a href="#">Book a hotel</a></li>
+                      <li><a href="#">Travel insurance</a></li>
+                      <li><a href="#">Extra legroom seat</a></li>
+                      <li><a href="#">Excess baggage</a></li>
+                      <li><a href="#">Portable WiFi hotspot</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div class="fly-header__right">
@@ -500,6 +542,13 @@
           $('.booking-box__dropdown').slideToggle(400);
           $('.booking-box').toggleClass('open-dropdown');
       });
+    </script>
+    <script>
+      if (screen.width <= 767) {
+          $('.nav-item').click(function () {
+              $(this).find('.navbar-sub').slideToggle(400);
+          });
+      }
     </script>
   </body>
 </html>

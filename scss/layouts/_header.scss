@@ -107,6 +107,15 @@
     .nav-item {
       @include breakpoint(sm){
         padding: 0 5px;
+        position: relative;
+      }
+      &:hover{
+        @include breakpoint(sm){
+          .navbar-sub{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
       }
       &.active {
         .nav-link{
@@ -135,6 +144,62 @@
             background-color:$main-color;
           }
         }
+      }
+    }
+  }
+  .navbar-sub{
+    background-color:#1087b4;
+    @include breakpoint(xs){
+      display: none;
+    }
+    @include breakpoint(sm){
+      position: absolute;
+      top: calc(100% + 15px);
+      left: -490px;
+      width: 700px;
+      display: flex;
+      transition: all .3s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 10;
+      &:before{
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 540px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #22374f transparent;
+      }
+    }
+    @include breakpoint(lg){
+      top: calc(100% + 20px);
+    }
+    &__item{
+      @include breakpoint(sm){
+        width: 33.333%;
+      }
+      ul{
+        list-style: disc;
+        padding:7px 0 7px 30px;
+        li{
+          a{
+            font-size: 14px;
+            color: #fff;
+            display: block;
+            padding: 7px 10px;
+          }
+        }
+      }
+    }
+    &__title{
+      background-color: #22374f;
+      padding: 15px;
+      h5{
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
       }
     }
   }

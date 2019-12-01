@@ -1,0 +1,56 @@
+- var page = "booking";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+
+    body(ontouchstart='')
+        include jades/header.jade
+        main.wrapper
+            section.fly-setting
+                .container
+                    .fly-setting__row
+                        .fly-setting__left
+                            ul.sidebar
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Manage Booking
+
+                                li.sidebar__item.active
+                                    a.sidebar__link(href='#') Booking Status
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Fare Types
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Payment Guide
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Refund Request
+
+                                li.sidebar__item
+                                    a.sidebar__link(href='#') Booking Change
+
+                        .fly-setting__right
+                            .fly-setting__box.fly-booking
+                                .fly-setting__title
+                                    h5 Booking Status
+                                p.p1 Check your flight booking status
+                                .fly-booking__row
+                                    .form-group
+                                        label Booking Ref or E-ticket number
+                                        input.form-control(type='text' placeholder='VF...')
+                                    .form-group
+                                        label Registered Email
+                                        input.form-control(type='text' placeholder='abc@gmail.com')
+                                p.fly-booking__note Note: It is only accepted for bookings on our website!
+                                .fly-setting__btn
+                                    button.btn.btn-blue(type='button') Find My Booking
+        include jades/footer.jade
+        script(type='text/javascript' src="js/jquery-3.3.1.min.js")
+        script(type='text/javascript' src="js/popper.min.js")
+        script(type='text/javascript' src="js/bootstrap.min.js")
+        script(type='text/javascript' src="js/slick.min.js")
+
+
+
+
